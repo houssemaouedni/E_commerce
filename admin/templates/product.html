@@ -1,0 +1,155 @@
+<!-- Button trigger modal -->
+<button
+  type="button"
+  class="btn btn-primary"
+  data-bs-toggle="modal"
+  data-bs-target="#staticBackdrop"
+>
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="25"
+    height="25"
+    fill="currentColor"
+    class="bi bi-plus-circle-fill"
+    viewBox="0 0 19 19"
+  >
+    <path
+      d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3v-3z"
+    />
+  </svg>
+  Add new Produit
+</button>
+
+<div class="card-body">
+  <div class="table-responsive">
+    <table
+      class="hover table table-striped"
+      id="dateTable"
+      width="100%"
+      cellspacing="0"
+    >
+      <thead>
+        <tr>
+          <th>id</th>
+          <th>Name</th>
+          <th>Description</th>
+          <th>Price</th>
+          <th>category</th>
+          <th>Stock</th>
+          <th>Date de creation</th>
+          <th>action</th>
+        </tr>
+      </thead>
+      <tfoot>
+        <tr>
+          <th>id</th>
+          <th>Name</th>
+          <th>Description</th>
+          <th>Price</th>
+          <th>category</th>
+          <th>Stock</th>
+          <th>Date de creation</th>
+        </tr>
+      </tfoot>
+      <tbody></tbody>
+    </table>
+  </div>
+</div>
+
+<!-- Modal -->
+<div
+  class="modal fade"
+  id="staticBackdrop"
+  data-bs-backdrop="static"
+  data-bs-keyboard="false"
+  tabindex="-1"
+  aria-labelledby="staticBackdropLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="staticBackdropLabel">Add new</h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body">
+        <form action="" id="formProduit">
+          <div class="input-group">
+            <span class="input-group-text">Name : </span>
+            <input
+              type="text"
+              aria-label="name"
+              name="name"
+              class="form-control"
+            />
+          </div>
+          <div class="input-group mt-3">
+            <span class="input-group-text">Description : </span>
+            <textarea
+              type="text"
+              cols="30"
+              rows="10"
+              name="description"
+              class="form-control"
+            ></textarea>
+          </div>
+          <div class="input-group mt-3">
+            <span class="input-group-text">Price : </span>
+            <input
+              type="number"
+              aria-label="name"
+              name="price"
+              class="form-control"
+            />
+          </div>
+          <div class="input-group mt-3">
+            <span class="input-group-text">category : </span>
+            <input
+              type="number"
+              aria-label="name"
+              name="category"
+              class="form-control"
+            />
+          </div>
+          <div class="input-group mt-3">
+            <span class="input-group-text">stock : </span>
+            <input
+              type="number"
+              aria-label="name"
+              name="stock"
+              class="form-control"
+            />
+          </div>
+          <div class="input-group mt-3">
+            <span class="input-group-text">image: </span>
+            <input
+              type="file"
+              id="fileUplod"
+              aria-label="name"
+              name="image"
+              class="form-control"
+            />
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button
+          type="button"
+          id="close"
+          class="btn btn-secondary"
+          data-bs-dismiss="modal"
+        >
+          Close
+        </button>
+        <button type="button" data-bs-dismiss="modal" onclick="addProduct()" class="btn btn-primary">
+          ajouter
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

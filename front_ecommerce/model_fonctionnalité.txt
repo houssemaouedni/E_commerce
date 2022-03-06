@@ -1,0 +1,12 @@
+
+
+Boutique
+    Affichage des produits -> getProduct();
+    Affichage des category -> getCategory();
+
+
+Customers
+    s'inscrire -> createCustomers();
+    se connecter -> authentifire();
+    Achat -> creatOrders();
+    Mettre ajour de donnée personelle -> updateInfoCustomer();

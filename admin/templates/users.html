@@ -1,0 +1,99 @@
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+    Add new Users
+  </button>
+<!-- tableu de user B-D-->
+<div class="card-body">
+    <div class="table-responsive">
+        <table class="table tabel-bordered" id="dateTable" width="100%" cellspacing="0">
+            <thead>
+                <tr>
+                    <th>id</th>
+                    <th>Email</th>
+                    <th>firstname</th>
+                    <th>lastname</th>
+                </tr>
+            </thead>
+            <tfoot>
+                <tr>
+                    <th>id</th>
+                    <th>Email</th>
+                    <th>firstname</th>
+                    <th>lastname</th>
+                </tr>
+            </tfoot>
+            <tbody>
+                
+            </tbody>
+        </table>
+        
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="staticBackdropLabel">Add new USERS</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <form action="" id="formUsers">
+                <div class="input-group">
+                    <span class="input-group-text">Pseudo : </span>
+                    <input type="text" onchange="localStorage.setItem(this.name, this.value)" aria-label="pseudo" name="pseudo" class="form-control">
+                  </div>
+                <div class="input-group mt-3">
+                    <span class="input-group-text">firstname : </span>
+                    <input type="text" onchange="localStorage.setItem(this.name, this.value)"  cols="30" rows="10" name="firstname" class="form-control">
+                  </div>
+                <div class="input-group mt-3">
+                    <span class="input-group-text">lastname : </span>
+                    <input type="text" onchange="localStorage.setItem(this.name, this.value)" aria-label="name" name="lastname" class="form-control">
+                  </div>
+                <div class="input-group mt-3">
+                    <span class="input-group-text">description : </span>
+                    <textarea type="text" onchange="localStorage.setItem(this.name, this.value)" aria-label="name" name="description" class="form-control"></textarea>
+                  </div>
+                <div class="input-group mt-3">
+                    <select class="form-select form-select-lg mb-3" name="sexe" onchange="localStorage.setItem(this.name, this.value)" aria-label=".form-select-lg example">
+                        <option selected >Sexe : </option>
+                        <option name="sexe" value="1">Homme</option>
+                        <option name="sexe" value="2">Femme</option>
+                      </select>
+                 </div>
+                <div class="input-group mt-3">
+                    <span class="input-group-text">dateBirth: </span>
+                    <input type="text" onchange="localStorage.setItem(this.name, this.value)" aria-label="name" name="dateBirth" class="form-control">
+                  </div>
+                <div class="input-group mt-3">
+                    <span class="input-group-text">adresse facturation: </span>
+                    <input type="text" onchange="localStorage.setItem(this.name, this.value)" aria-label="name" name="adresse_facturation" class="form-control">
+                  </div>
+                <div class="input-group mt-3">
+                    <span class="input-group-text">adresse Livraison </span>
+                    <input type="text" onchange="localStorage.setItem(this.name, this.value)" aria-label="name" name="adresse_Livraison" class="form-control">
+                  </div>
+                <div class="input-group mt-3">
+                    <span class="input-group-text">Téléphone: </span>
+                    <input type="text" onchange="localStorage.setItem(this.name, this.value)" aria-label="name" name="tel" class="form-control">
+                  </div>
+                <div class="input-group mt-3">
+                    <span class="input-group-text">Email: </span>
+                    <input type="text" onchange="localStorage.setItem(this.name, this.value)" aria-label="name" name="email" class="form-control">
+                  </div>
+                <div class="input-group mt-3">
+                    <span class="input-group-text">Password: </span>
+                    <input type="text" onchange="localStorage.setItem(this.name, this.value)" aria-label="name" name="password" class="form-control">
+                  </div>
+
+            </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" id="close" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" onclick="addUsers()" class="btn btn-primary">ajouter</button>
+        </div>
+      </div>
+    </div>
+  </div>
